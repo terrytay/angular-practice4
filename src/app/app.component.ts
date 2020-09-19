@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'assignment4';
+  numberArray: number[] = [];
+
+  // Event function call when each tick increment.
+  addNumberComponent(count: number): void {
+    this.numberArray.push(count);
+  }
+
+  resetNumberArray(gameStopped: boolean): void {
+    if (gameStopped) {
+      this.numberArray = [];
+    }
+  }
 }
